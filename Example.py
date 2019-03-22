@@ -5,5 +5,5 @@ from Crawler import Crawler
 logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
 
 crawler = Crawler()
-crawler.crawl_with_username(username="AltumAlien")
+crawler.crawl_with_username(username="realDonaldTrump")
 crawler.destroy()
