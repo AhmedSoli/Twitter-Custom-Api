@@ -7,8 +7,8 @@ from selenium.webdriver.common.keys import Keys
 
 class Crawler:
 
-	def __init__(self):
-		self.browser = Browser()
+	def __init__(self,operating_system):
+		self.browser = Browser(operating_system)
 
 	def scroll_till_bottom(self):
 
@@ -71,7 +71,7 @@ class Crawler:
 		self.generate_json(tweets,username,date_from,date_to)
 
 	def generate_json(self,tweets,username,date_from,date_to):
-		with open(username + "_tweets_" + date_from + "_" + date_to + ".json","w+") as f:
+		with open("data/" + username + "_tweets_" + date_from + "_" + date_to + ".json","w+") as f:
 			json.dump(tweets,f)
 			print("Tweets crawled:",len(tweets))
 

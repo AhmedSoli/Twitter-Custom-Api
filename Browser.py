@@ -3,11 +3,11 @@ from selenium import webdriver
 import logging
 
 class Browser:
-
-	def __init__(self):
+	# operating systems: linux: Linux, win: Windows, mac: MAC OS
+	def __init__(self,operating_system):
 		# init logging
 		# get path to working directory
-		path = os.getcwd()
+		path = os.path.join(os.getcwd(),"chrome_driver")
 		# init browser options object
 		options = webdriver.ChromeOptions()
 		# disable loading of images
@@ -17,7 +17,7 @@ class Browser:
 		# make chrome headless
 		options.add_argument('headless')
 		# start a new session using web driver
-		self.session = webdriver.Chrome(os.path.join(path,"chromedriver_linux"),options=options)
+		self.session = webdriver.Chrome(os.path.join(path,operating_system),options=options)
 		logging.info("Browser session started...")
 
 	def quit(self):
