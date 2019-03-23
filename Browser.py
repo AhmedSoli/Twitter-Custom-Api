@@ -17,7 +17,7 @@ class Browser:
 		# make chrome headless
 		options.add_argument('headless')
 		# start a new session using web driver
-		self.session = webdriver.Chrome(os.path.join(path,"chromedriver"),options=options)
+		self.session = webdriver.Chrome(os.path.join(path,"chromedriver_linux"),options=options)
 		logging.info("Browser session started...")
 
 	def quit(self):
