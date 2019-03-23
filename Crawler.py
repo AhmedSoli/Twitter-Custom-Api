@@ -1,4 +1,5 @@
 import time
+import datetime
 import json
 import logging
 from Browser import Browser
@@ -54,7 +55,7 @@ class Crawler:
 
 		return tweets
 
-	def crawl_with_username(self,username,date_from = "2006-01-01",date_to = "2030-01-01"):
+	def crawl_with_username(self,username,date_from = "2006-01-01",date_to = datetime.datetime.now().strftime("%Y-%m-%d")):
 
 		logging.info("Crawling user: {} from: {} to: {}".format(username,date_from,date_to))
 		# use twittet advanced search to retrieve all tweets
