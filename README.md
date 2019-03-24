@@ -28,4 +28,7 @@ The tweets corpus contain all tweets from the following politicians:
 	- Turkey:
 		+ cbabdullahgul (Abdullah Gül)
 
+# Political Authors
+
+The folder political authors contains two collections of political authors crawled from two different website (allsides/statsocial)
 
