@@ -42,7 +42,7 @@ class Crawler:
 				tweet['retweet_count'] =  post.find_element_by_class_name("ProfileTweet-action--retweet").find_element_by_class_name("ProfileTweet-actionCount").get_attribute('data-tweet-stat-count')
 				tweet['favorite_count'] =  post.find_element_by_class_name("ProfileTweet-action--favorite").find_element_by_class_name("ProfileTweet-actionCount").get_attribute('data-tweet-stat-count')
 				tweet['author'] = post.find_element_by_class_name("username").find_element_by_tag_name("b").text
-				if tweet['author'] != 'HillaryClinton':
+				if tweet['author'] != username:
 					tweet['is_retweet'] = True
 				else:
 					tweet['is_retweet'] = False
