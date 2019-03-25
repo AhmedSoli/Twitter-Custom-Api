@@ -4,7 +4,7 @@ import logging
 import multiprocessing as mp
 
 def crawl(username):
-	crawler = Crawler(operating_system = "mac")
+	crawler = Crawler(operating_system = "linux")
 	crawler.crawl_with_username(username)
 	crawler.destroy()
 
@@ -21,6 +21,6 @@ with open("political_authors/statsocial.json","r") as f:
 	for journalist in journalists:
 		usernames.append(journalist['username'].split("@")[-1])
 
-p = mp.Pool(8)
+p = mp.Pool(12)
 
 p.map(crawl,usernames)
